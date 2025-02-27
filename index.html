@@ -1,0 +1,93 @@
+<style>
+  
+  * { box-sizing: border-box; }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+	
+  .frame {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    border: 1px solid black;
+  }
+  
+  .cup{
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border:1px solid black;
+    background-image:linear-gradient(180deg, rgba(22,42,199,1) 50%, white 50%);
+    background-size: 100% 40%;
+  }
+  
+  .top-cup{
+    position: absolute;
+    left: 200px;
+    bottom: 160px;
+      
+  }
+  
+  .bottom-cup{
+    position: absolute;
+    left: 150px;
+    bottom: 50px;
+  }
+  
+  .cup::before {
+    content:"";
+    position: absolute;
+    background: red;
+    width: 70%;
+    height: 100%;
+    clip-path: polygon(100% 54%, 0 0, 0 100%);
+  }
+  
+  .cup::after {
+    content:"";
+    position: absolute;
+    background: white;
+    width: 30%;
+    height: 30%;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    transform: translate(30%, 120%);
+  }
+  
+  .cup-handle{
+    width: 100px;
+    height: 100px; 
+    background-color: transparent;
+    border-top-left-radius: 110px;  
+    border-top-right-radius: 100px; 
+    border: 5px solid black;
+    border-bottom: 0;
+    transform: rotate(-90deg);
+  }
+   
+  .top-handle{
+    position: absolute;
+    left: 100px;
+    bottom: 160px;
+  }
+  
+  .bottom-handle{
+    position: absolute;
+    left: 50px;
+    bottom: 50px;
+  }
+  
+</style>
+
+
+<div class="frame">
+  <div class="cup top-cup"></div>
+  <div class="cup bottom-cup"></div>
+  <div class="cup-handle top-handle"></div>
+  <div class="cup-handle bottom-handle"></div>
+  
+</div>
