@@ -22,13 +22,13 @@
     height: 100px;
     background-color: white;
     border:1px solid black;
-    background-image:linear-gradient(180deg, rgba(22,42,199,1) 50%, white 50%);
-    background-size: 100% 40%;
+    background-image:linear-gradient(180deg, rgba(22,42,199,1) 55%, white 50%);
+    background-size: 150% 40%;
   }
   
   .top-cup{
     position: absolute;
-    left: 200px;
+    left: 190px;
     bottom: 160px;
       
   }
@@ -40,7 +40,7 @@
   }
   
   .cup::before {
-    content:"";
+    content: "";
     position: absolute;
     background: red;
     width: 70%;
@@ -49,7 +49,7 @@
   }
   
   .cup::after {
-    content:"";
+    content: "";
     position: absolute;
     background: white;
     width: 30%;
@@ -58,20 +58,31 @@
     transform: translate(30%, 120%);
   }
   
-  .cup-handle{
-    width: 100px;
-    height: 100px; 
-    background-color: transparent;
-    border-top-left-radius: 110px;  
-    border-top-right-radius: 100px; 
-    border: 5px solid black;
-    border-bottom: 0;
-    transform: rotate(-90deg);
+  .cup-handle-blue{
+  width: 50px;
+  height: 100px;
+  background-color: blue;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  }
+  
+  .cup-handle-white{
+  width: 50px; 
+  height: 100px;
+  background-color: white;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
   }
    
-  .top-handle{
+  .top-handle-white{
     position: absolute;
-    left: 100px;
+    left: 150px;
+    bottom: 160px;
+  }
+  
+  .top-handle-blue{
+    position: absolute;
+    left: 140px;
     bottom: 160px;
   }
   
@@ -85,9 +96,10 @@
 
 
 <div class="frame">
+  <div class="cup-handle-blue top-handle-blue"></div>
+  <div class="cup-handle-white top-handle-white"></div>
+  <div class="cup-handle bottom-handle"></div>
   <div class="cup top-cup"></div>
   <div class="cup bottom-cup"></div>
-  <div class="cup-handle top-handle"></div>
-  <div class="cup-handle bottom-handle"></div>
   
 </div>
