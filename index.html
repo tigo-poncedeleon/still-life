@@ -1,5 +1,7 @@
 <style>
   
+  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playwrite+CU+Guides&family=Smooch+Sans:wght@100..900&display=swap');
+  
   * { box-sizing: border-box; }
   
   body {
@@ -15,28 +17,16 @@
     width: 500px;
     height: 500px;
     border: 1px solid black;
+    overflow: visible;
   }
   
   .cup{
     width: 100px;
     height: 100px;
     background-color: white;
-    border:1px solid black;
-    background-image:linear-gradient(180deg, rgba(22,42,199,1) 55%, white 50%);
+    border: 1px solid black;
+    background-image: linear-gradient(180deg, rgba(22,42,199,1) 55%, white 50%);
     background-size: 150% 40%;
-  }
-  
-  .top-cup{
-    position: absolute;
-    left: 190px;
-    bottom: 160px;
-      
-  }
-  
-  .bottom-cup{
-    position: absolute;
-    left: 150px;
-    bottom: 50px;
   }
   
   .cup::before {
@@ -58,48 +48,107 @@
     transform: translate(30%, 120%);
   }
   
-  .cup-handle-blue{
-  width: 50px;
-  height: 100px;
-  background-color: blue;
-  border-top-left-radius: 50px;
-  border-bottom-left-radius: 50px;
+  .top-cup{
+    position: absolute;
+    left: 70px;
+    bottom: 100px;
+      
   }
   
-  .cup-handle-white{
-  width: 50px; 
-  height: 100px;
-  background-color: white;
-  border-top-left-radius: 50px;
-  border-bottom-left-radius: 50px;
+  .bottom-cup{
+    position: absolute;
+    left: 70px;
+    bottom: 0px;
+  }
+  
+  .cup-handle{
+    position: relative;
+    width: 50px;
+    height: 100px;
+    background-color: blue;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+  }
+
+  .cup-handle::after { 
+    content: "";
+    position: absolute;
+    left: 10px;
+    width: 50px; 
+    height: 100px;
+    background-color: white;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
   }
    
-  .top-handle-white{
+  .top-handle {
     position: absolute;
-    left: 150px;
-    bottom: 160px;
-  }
-  
-  .top-handle-blue{
-    position: absolute;
-    left: 140px;
-    bottom: 160px;
+    left: 30px;
+    bottom: 100px;
   }
   
   .bottom-handle{
     position: absolute;
-    left: 50px;
-    bottom: 50px;
+    left: 30px;
+    bottom: 0px;
   }
+  
+  .cafe{
+    width: 200px;
+    height: 300px;
+    background: linear-gradient(0deg, rgba(195,57,34,1) 37%, rgba(253,210,45,1) 37%);
+    position: absolute;
+    left: 170px;
+    bottom: 0px;
+  }
+
+  .cafe::before {
+    content: "";
+    position: absolute;
+    width: 30%;
+    height: 10%;
+    clip-path: polygon(50% 0%, 0 100%, 100% 100%);
+    background: repeating-linear-gradient(
+        90deg, 
+        black 0%, black 5%, 
+        yellow 5%, yellow 10%
+    );
+    transform: translate(210%, 130%);
+  }
+  
+  .cafe::after{
+    content:"";
+    position: absolute;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-top: 50px solid red; 
+    left: 130px;
+    top: 35px;
+  }
+  
+.cafe-bustelo {
+    position: absolute;
+    font-family: Arial, sans-serif;
+    font-weight: 600;
+    background: red;
+    color: yellow; 
+    padding: 10px; 
+    display: inline-block; 
+    left: 50%;  
+    top: -50px;  
+    transform: translateX(-50%); 
+    border: 5px solid blue;
+    z-index: 1000; 
+  }
+  
   
 </style>
 
-
 <div class="frame">
-  <div class="cup-handle-blue top-handle-blue"></div>
-  <div class="cup-handle-white top-handle-white"></div>
+  <div class="cup-handle top-handle"></div>
   <div class="cup-handle bottom-handle"></div>
   <div class="cup top-cup"></div>
   <div class="cup bottom-cup"></div>
-  
+  <div class="cafe"></div>
+  <div class="cafe-bustelo">Café Bustelo</div>
 </div>
