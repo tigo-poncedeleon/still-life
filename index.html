@@ -1,7 +1,5 @@
 <style>
   
-  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playwrite+CU+Guides&family=Smooch+Sans:wght@100..900&display=swap');
-  
   * { box-sizing: border-box; }
   
   body {
@@ -117,7 +115,7 @@
   }
   
   .cafe::after{
-    content:"";
+    content: "";
     position: absolute;
     border-left: 25px solid transparent;
     border-right: 25px solid transparent;
@@ -126,29 +124,159 @@
     top: 35px;
   }
   
-.cafe-bustelo {
+.cafe-word {
     position: absolute;
-    font-family: Arial, sans-serif;
+    font-family: fantasy;
     font-weight: 600;
-    background: red;
-    color: yellow; 
-    padding: 10px; 
-    display: inline-block; 
-    left: 50%;  
-    top: -50px;  
+    font-size: 40px;
+    color: blue; 
+    left: 230px;  
+    top: 230px;  
     transform: translateX(-50%); 
-    border: 5px solid blue;
-    z-index: 1000; 
   }
   
+.bustelo-word {
+    position: absolute;
+    font-family: fantasy;
+    font-weight: 600;
+    font-size: 40px;
+    color: blue; 
+    padding: 10px;  
+    left: 255px;  
+    top: 270px;  
+    transform: translateX(-50%); 
+  }
+  
+.espresso-word {
+    position: absolute;
+    font-family: serif;
+    font-weight: 100;
+    font-size: 17px;
+    color: black; 
+    left: 185px;  
+    top: 340px;  
+  }
+  
+.always-word {
+    position: absolute;
+    font-family: "Impact", fantasy;
+    font-size: 10px;
+    color: white; 
+    left: 180px;  
+    top: 400px;  
+  }
+
+.vacuum-word {
+    position: absolute;
+    font-family: "Arial";
+    font-size: 10px;
+    color: yellow; 
+    left: 185px;  
+    top: 415px;  
+  }
+  
+.net-word {
+    position: absolute;
+    font-family: "monaco", system-ui;
+    font-size: 12px;
+    color: white; 
+    left: 195px;  
+    top: 450px;  
+  }
+  
+  .kettle-lid {
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    background: orange;
+    border: 1px solid black;
+    left: 230px;
+    bottom: 300px;
+    clip-path: polygon(100% 0, 0 34%, 100% 100%);
+  }
+
+.kettle-piece-1 {
+    position: absolute;
+    width: 60px;
+    height: 75px;
+    background: orange;
+    border: 1px solid black;
+    left: 305px;
+    bottom: 300px;
+  }
+  
+.kettle-piece-2 {
+    position: absolute;
+    width: 60px;
+    height: 375px;
+    background: orange;
+    border: 1px solid black;
+    left: 365px;
+    bottom: 0px;
+  }
+  
+.kettle-piece-3 {
+    position: absolute;
+    width: 73px;
+    height: 375px;
+    background: orange;
+    border: 1px solid black;
+    left: 425px;
+    bottom: 0px;
+  }
+  
+  .kettle-top {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: orange;
+    border: 1px solid black;
+    clip-path: polygon(34% 70%, 64% 70%, 100% 100%, 0% 100%);
+    left: 300px;
+    bottom: 374px;
+  }
+  
+  .top-piece-1 {
+    position: absolute;
+    width: 59px;
+    height: 30px;
+    background: black;
+    border: 1px solid black;
+    left: 370px;
+    bottom: 434px;
+  }
+  
+  .top-piece-2 {
+    position: absolute;
+    width: 59px;
+    height: 59px;
+    background: black;
+    border: 1px solid black;
+    left: 370px;
+    bottom: 430px;
+    clip-path: circle(50% at 50% 50%);
+
+  }
   
 </style>
 
 <div class="frame">
+  <div class="kettle-lid"></div>
+  <div class="kettle-piece-1"></div>
+  <div class="kettle-piece-2"></div>
+  <div class="kettle-piece-3"></div>
+  <div class="top-piece-1"></div>
+  <div class="top-piece-2"></div>
   <div class="cup-handle top-handle"></div>
   <div class="cup-handle bottom-handle"></div>
   <div class="cup top-cup"></div>
   <div class="cup bottom-cup"></div>
   <div class="cafe"></div>
-  <div class="cafe-bustelo">Café Bustelo</div>
+  <div class="cafe-word">Café</div>
+  <div class="bustelo-word">Bustelo</div>
+  <div class="espresso-word">Espresso Ground Coffee</div>
+  <div class="always-word">ALWAYS PURE AND FLAVORFUL, LIKE NO OTHER </div>
+  <div class="vacuum-word">Vacuum Packed - 100% Pure Coffee</div>
+  <div class="net-word">NET WT 10 OZ (283G)</div>
+  <div class="kettle-top"></div>
 </div>
